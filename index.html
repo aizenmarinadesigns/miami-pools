@@ -314,187 +314,289 @@
         </section>
 
         <!-- Before / After Gallery -->
-        <section id="transformaciones" class="w-full py-8 bg-white overflow-hidden">
-            <div class="max-w-lg mx-auto px-4 sm:px-6">
+       <!-- =============================================
+     SECCIÓN: Transformaciones (Before/After Slider)
+     
+     CÓMO USAR:
+     1. En tu index.html, buscá id="transformaciones"
+     2. Borrá toda esa <section>...</section>
+     3. Pegá este bloque en su lugar
+     4. El <script> del final: pegalo antes de </body>
+        (si ya tenías uno del slider anterior, borralo)
+     ============================================= -->
 
-                <!-- Header + nav buttons -->
-                <div class="flex items-center justify-between mb-4">
-                    <div>
-                        <h2 class="text-xl font-semibold tracking-tight text-gray-900 font-space-grotesk">
-                            <span class="lang-es">Transformaciones</span><span class="lang-en">Transformations</span>
-                        </h2>
-                        <p class="text-xs text-gray-400 font-medium mt-0.5 font-geist">
-                            <span class="lang-es">Resultados reales en Miami-Dade.</span>
-                            <span class="lang-en">Real results in Miami-Dade.</span>
-                        </p>
-                    </div>
-                    <div class="flex gap-2">
-                        <button id="gallery-prevBtn" aria-label="Anterior" class="flex items-center justify-center w-8 h-8 rounded-full border border-gray-200 bg-white text-gray-500 hover:border-sky-400 hover:text-sky-500 transition-all shadow-sm focus:outline-none disabled:opacity-30 disabled:cursor-not-allowed" disabled>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-                        </button>
-                        <button id="gallery-nextBtn" aria-label="Siguiente" class="flex items-center justify-center w-8 h-8 rounded-full border border-gray-200 bg-white text-gray-500 hover:border-sky-400 hover:text-sky-500 transition-all shadow-sm focus:outline-none disabled:opacity-30 disabled:cursor-not-allowed">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-                        </button>
-                    </div>
-                </div>
+<section id="transformaciones" class="w-full py-10 sm:py-16 relative overflow-hidden">
+    
+    <div class="max-w-xl mx-auto px-5 sm:px-6">
+        
+        <!-- Header + Flechas -->
+        <div class="flex items-end justify-between mb-5 sm:mb-8">
+            <div>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight mb-1" style="color: #0B2B40;">
+                    <span data-lang="es">Transformaciones</span><span data-lang="en" class="hidden">Transformations</span>
+                </h2>
+                <p class="text-sm sm:text-base" style="color: #0B2B40; opacity: 0.5;">
+                    <span data-lang="es">Resultados reales en Miami-Dade.</span><span data-lang="en" class="hidden">Real results in Miami-Dade.</span>
+                </p>
+            </div>
+            <div class="flex gap-2 flex-shrink-0 ml-4">
+                <button id="ba-prevBtn" aria-label="Anterior" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full border bg-white transition-all duration-200 focus:outline-none disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-md" style="border-color: rgba(11,43,64,0.1); color: #0B2B40;" disabled>
+                    <iconify-icon icon="solar:arrow-left-linear" width="20"></iconify-icon>
+                </button>
+                <button id="ba-nextBtn" aria-label="Siguiente" class="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full border bg-white transition-all duration-200 focus:outline-none disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-md" style="border-color: rgba(11,43,64,0.1); color: #0B2B40;">
+                    <iconify-icon icon="solar:arrow-right-linear" width="20"></iconify-icon>
+                </button>
+            </div>
+        </div>
 
-                <!-- Carousel -->
-                <div class="relative" id="gallery-carousel">
-                    <div class="overflow-hidden rounded-2xl border border-gray-100 shadow-sm bg-white">
-                        <div id="gallery-track" class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
-
-                            <!-- CARD 1: Kendall – Limpieza profunda -->
-                            <div class="w-full flex-shrink-0">
-                                <!-- Images -->
-                                <div class="relative h-44 sm:h-52 w-full overflow-hidden bg-gray-100">
-                                    <div class="flex h-full">
-                                        <div class="w-1/2 h-full overflow-hidden">
-                                            <img src="img/antes-despues/piletero-borde.png" alt="Antes" class="w-full h-full object-cover">
+        <!-- Carousel -->
+        <div class="relative w-full" id="ba-carousel">
+            <div class="overflow-hidden rounded-2xl sm:rounded-3xl bg-white" style="border: 1px solid rgba(11,43,64,0.08); box-shadow: 0 1px 3px rgba(11,43,64,0.06), 0 8px 24px rgba(11,43,64,0.04);">
+                <div id="ba-track" class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    
+                    <!-- ========== Card 1: Kendall ========== -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="flex flex-col">
+                            <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
+                                <img src="img/antes-despues/piletero-borde.png" alt="Limpieza profunda Kendall" class="w-full h-full object-cover">
+                                <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest shadow-sm" style="background: rgba(255,255,255,0.92); color: #0B2B40; padding: 3px 10px;">
+                                    <span data-lang="es">Antes</span><span data-lang="en" class="hidden">Before</span>
+                                </div>
+                                <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white shadow-sm" style="background: rgba(0,180,216,0.88); padding: 3px 10px;">
+                                    <span data-lang="es">Después</span><span data-lang="en" class="hidden">After</span>
+                                </div>
+                            </div>
+                            <div class="px-5 py-4 sm:px-6 sm:py-5">
+                                <div class="grid grid-cols-2 gap-y-3.5 gap-x-3 sm:gap-y-4 sm:gap-x-4">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:map-point-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Ubicación</span><span data-lang="en" class="hidden">Location</span></span>
                                         </div>
-                                        <div class="w-1/2 h-full overflow-hidden border-l-2 border-white/60">
-                                            <img src="img/antes-despues/pileta-renovada.png" alt="Después" class="w-full h-full object-cover">
-                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">Kendall</span>
                                     </div>
-                                    <span class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Antes</span>
-                                    <span class="absolute top-2 right-2 bg-sky-500/90 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Después</span>
-                                </div>
-                                <!-- Info strip -->
-                                <div class="px-4 py-3 flex items-center gap-x-2.5 flex-wrap text-xs text-gray-500 font-geist border-t border-gray-50">
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                        Kendall
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                        6h
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="truncate max-w-[120px] sm:max-w-none"><span class="lang-es">Limpieza profunda</span><span class="lang-en">Deep cleaning</span></span>
-                                    <span class="ml-auto font-semibold text-sky-500 text-sm">$450</span>
-                                </div>
-                            </div>
-
-                            <!-- CARD 2: Coral Gables – Diamond Brite -->
-                            <div class="w-full flex-shrink-0">
-                                <div class="relative h-44 sm:h-52 w-full overflow-hidden bg-gray-100">
-                                    <div class="flex h-full">
-                                        <div class="w-1/2 h-full overflow-hidden">
-                                            <img src="img/antes-despues/construccion-pileta.png" alt="Antes" class="w-full h-full object-cover">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:clock-circle-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Tiempo</span><span data-lang="en" class="hidden">Time</span></span>
                                         </div>
-                                        <div class="w-1/2 h-full overflow-hidden border-l-2 border-white/60">
-                                            <img src="img/antes-despues/pileta-latino.png" alt="Después" class="w-full h-full object-cover">
-                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">6 horas</span>
                                     </div>
-                                    <span class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Antes</span>
-                                    <span class="absolute top-2 right-2 bg-sky-500/90 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Después</span>
-                                </div>
-                                <div class="px-4 py-3 flex items-center gap-x-2.5 flex-wrap text-xs text-gray-500 font-geist border-t border-gray-50">
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                        Coral Gables
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                        3 días
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="truncate max-w-[120px] sm:max-w-none"><span class="lang-es">Renovación Diamond Brite</span><span class="lang-en">Diamond Brite resurface</span></span>
-                                    <span class="ml-auto font-semibold text-sky-500 text-sm">$4,200</span>
-                                </div>
-                            </div>
-
-                            <!-- CARD 3: Miami Gardens – Green-to-Clean -->
-                            <div class="w-full flex-shrink-0">
-                                <div class="relative h-44 sm:h-52 w-full overflow-hidden bg-gray-100">
-                                    <div class="flex h-full">
-                                        <div class="w-1/2 h-full overflow-hidden">
-                                            <img src="img/antes-despues/analisis-ph-pileta.png" alt="Antes" class="w-full h-full object-cover">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:paint-roller-outline" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Servicio</span><span data-lang="en" class="hidden">Service</span></span>
                                         </div>
-                                        <div class="w-1/2 h-full overflow-hidden border-l-2 border-white/60">
-                                            <img src="img/antes-despues/latino-pileta.png" alt="Después" class="w-full h-full object-cover">
-                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5 leading-snug" style="color: #0B2B40;"><span data-lang="es">Limpieza profunda</span><span data-lang="en" class="hidden">Deep cleaning</span></span>
                                     </div>
-                                    <span class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Antes</span>
-                                    <span class="absolute top-2 right-2 bg-sky-500/90 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Después</span>
-                                </div>
-                                <div class="px-4 py-3 flex items-center gap-x-2.5 flex-wrap text-xs text-gray-500 font-geist border-t border-gray-50">
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                        Miami Gardens
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                        48h
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="truncate max-w-[110px] sm:max-w-none"><span class="lang-es">Tratamiento Green-to-Clean</span><span class="lang-en">Green-to-Clean shock</span></span>
-                                    <span class="ml-auto font-semibold text-sky-500 text-sm">$650</span>
-                                </div>
-                            </div>
-
-                            <!-- CARD 4: Key Biscayne – Lavado Ácido -->
-                            <div class="w-full flex-shrink-0">
-                                <div class="relative h-44 sm:h-52 w-full overflow-hidden bg-gray-100">
-                                    <img src="img/antes-despues/4-limpieza-acido-key-biscayne.png" alt="Resultado lavado ácido" class="w-full h-full object-cover">
-                                    <span class="absolute top-2 right-2 bg-sky-500/90 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full"><span class="lang-es">Resultado</span><span class="lang-en">Result</span></span>
-                                </div>
-                                <div class="px-4 py-3 flex items-center gap-x-2.5 flex-wrap text-xs text-gray-500 font-geist border-t border-gray-50">
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                        Key Biscayne
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                        1 día
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="truncate max-w-[110px] sm:max-w-none"><span class="lang-es">Lavado ácido</span><span class="lang-en">Acid wash</span></span>
-                                    <span class="ml-auto font-semibold text-sky-500 text-sm">$850</span>
-                                </div>
-                            </div>
-
-                            <!-- CARD 5: Doral – Bomba de Velocidad Variable -->
-                            <div class="w-full flex-shrink-0">
-                                <div class="relative h-44 sm:h-52 w-full overflow-hidden bg-gray-100">
-                                    <div class="flex h-full">
-                                        <div class="w-1/2 h-full overflow-hidden">
-                                            <img src="img/antes-despues/mantenimiento-de-equipos.png" alt="Antes" class="w-full h-full object-cover">
+                                    <div class="flex flex-col gap-0.5 justify-end">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Inversión</span><span data-lang="en" class="hidden">Investment</span></span>
                                         </div>
-                                        <div class="w-1/2 h-full overflow-hidden border-l-2 border-white/60">
-                                            <img src="img/antes-despues/mantenimiento-equipo-2.png" alt="Después" class="w-full h-full object-cover">
-                                        </div>
+                                        <span class="text-base sm:text-lg font-bold pl-5" style="color: #00B4D8;">$450</span>
                                     </div>
-                                    <span class="absolute top-2 left-2 bg-black/50 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Antes</span>
-                                    <span class="absolute top-2 right-2 bg-sky-500/90 backdrop-blur-sm text-white text-[9px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full">Después</span>
-                                </div>
-                                <div class="px-4 py-3 flex items-center gap-x-2.5 flex-wrap text-xs text-gray-500 font-geist border-t border-gray-50">
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                                        Doral
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="flex items-center gap-1">
-                                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                        4h
-                                    </span>
-                                    <span class="text-gray-200">·</span>
-                                    <span class="truncate max-w-[110px] sm:max-w-none"><span class="lang-es">Bomba velocidad variable</span><span class="lang-en">Variable speed pump</span></span>
-                                    <span class="ml-auto font-semibold text-sky-500 text-sm">$1,250</span>
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                    <!-- Dot indicators -->
-                    <div class="flex justify-center gap-1.5 mt-3" id="gallery-indicators"></div>
-                </div>
 
+                    <!-- ========== Card 2: Coral Gables ========== -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="flex flex-col">
+                            <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
+                                <img src="img/antes-despues/construccion-pileta.png" alt="Renovación Diamond Brite Coral Gables" class="w-full h-full object-cover">
+                                <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest shadow-sm" style="background: rgba(255,255,255,0.92); color: #0B2B40; padding: 3px 10px;">
+                                    <span data-lang="es">Antes</span><span data-lang="en" class="hidden">Before</span>
+                                </div>
+                                <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white shadow-sm" style="background: rgba(0,180,216,0.88); padding: 3px 10px;">
+                                    <span data-lang="es">Después</span><span data-lang="en" class="hidden">After</span>
+                                </div>
+                            </div>
+                            <div class="px-5 py-4 sm:px-6 sm:py-5">
+                                <div class="grid grid-cols-2 gap-y-3.5 gap-x-3 sm:gap-y-4 sm:gap-x-4">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:map-point-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Ubicación</span><span data-lang="en" class="hidden">Location</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">Coral Gables</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:clock-circle-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Tiempo</span><span data-lang="en" class="hidden">Time</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">3 días</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:paint-roller-outline" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Servicio</span><span data-lang="en" class="hidden">Service</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5 leading-snug" style="color: #0B2B40;"><span data-lang="es">Renovación de superficie (Diamond Brite)</span><span data-lang="en" class="hidden">Diamond Brite resurface</span></span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5 justify-end">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Inversión</span><span data-lang="en" class="hidden">Investment</span></span>
+                                        </div>
+                                        <span class="text-base sm:text-lg font-bold pl-5" style="color: #00B4D8;">$4,200</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== Card 3: Miami Gardens ========== -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="flex flex-col">
+                            <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
+                                <img src="img/antes-despues/pileta-renovada.png" alt="Green-to-Clean Miami Gardens" class="w-full h-full object-cover">
+                                <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest shadow-sm" style="background: rgba(255,255,255,0.92); color: #0B2B40; padding: 3px 10px;">
+                                    <span data-lang="es">Antes</span><span data-lang="en" class="hidden">Before</span>
+                                </div>
+                                <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white shadow-sm" style="background: rgba(0,180,216,0.88); padding: 3px 10px;">
+                                    <span data-lang="es">Después</span><span data-lang="en" class="hidden">After</span>
+                                </div>
+                            </div>
+                            <div class="px-5 py-4 sm:px-6 sm:py-5">
+                                <div class="grid grid-cols-2 gap-y-3.5 gap-x-3 sm:gap-y-4 sm:gap-x-4">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:map-point-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Ubicación</span><span data-lang="en" class="hidden">Location</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">Miami Gardens</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:clock-circle-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Tiempo</span><span data-lang="en" class="hidden">Time</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">48 horas</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:water-outline" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Servicio</span><span data-lang="en" class="hidden">Service</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5 leading-snug" style="color: #0B2B40;"><span data-lang="es">Tratamiento de Choque (Green-to-Clean)</span><span data-lang="en" class="hidden">Green-to-Clean shock treatment</span></span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5 justify-end">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Inversión</span><span data-lang="en" class="hidden">Investment</span></span>
+                                        </div>
+                                        <span class="text-base sm:text-lg font-bold pl-5" style="color: #00B4D8;">$650</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== Card 4: Key Biscayne ========== -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="flex flex-col">
+                            <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
+                                <img src="img/antes-despues/4-limpieza-acido-key-biscayne.png" alt="Lavado ácido Key Biscayne" class="w-full h-full object-cover">
+                                <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest shadow-sm" style="background: rgba(255,255,255,0.92); color: #0B2B40; padding: 3px 10px;">
+                                    <span data-lang="es">Antes</span><span data-lang="en" class="hidden">Before</span>
+                                </div>
+                                <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white shadow-sm" style="background: rgba(0,180,216,0.88); padding: 3px 10px;">
+                                    <span data-lang="es">Después</span><span data-lang="en" class="hidden">After</span>
+                                </div>
+                            </div>
+                            <div class="px-5 py-4 sm:px-6 sm:py-5">
+                                <div class="grid grid-cols-2 gap-y-3.5 gap-x-3 sm:gap-y-4 sm:gap-x-4">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:map-point-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Ubicación</span><span data-lang="en" class="hidden">Location</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">Key Biscayne</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:clock-circle-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Tiempo</span><span data-lang="en" class="hidden">Time</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">1 día</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:filters-outline" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Servicio</span><span data-lang="en" class="hidden">Service</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5 leading-snug" style="color: #0B2B40;"><span data-lang="es">Lavado Ácido y Remoción de Manchas</span><span data-lang="en" class="hidden">Acid wash &amp; stain removal</span></span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5 justify-end">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Inversión</span><span data-lang="en" class="hidden">Investment</span></span>
+                                        </div>
+                                        <span class="text-base sm:text-lg font-bold pl-5" style="color: #00B4D8;">$850</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ========== Card 5: Doral ========== -->
+                    <div class="w-full flex-shrink-0">
+                        <div class="flex flex-col">
+                            <div class="relative w-full overflow-hidden" style="aspect-ratio: 16/10;">
+                                <img src="img/antes-despues/mantenimiento-de-equipos.png" alt="Instalación bomba Doral" class="w-full h-full object-cover">
+                                <div class="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest shadow-sm" style="background: rgba(255,255,255,0.92); color: #0B2B40; padding: 3px 10px;">
+                                    <span data-lang="es">Antes</span><span data-lang="en" class="hidden">Before</span>
+                                </div>
+                                <div class="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 backdrop-blur-md rounded-full text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-white shadow-sm" style="background: rgba(0,180,216,0.88); padding: 3px 10px;">
+                                    <span data-lang="es">Después</span><span data-lang="en" class="hidden">After</span>
+                                </div>
+                            </div>
+                            <div class="px-5 py-4 sm:px-6 sm:py-5">
+                                <div class="grid grid-cols-2 gap-y-3.5 gap-x-3 sm:gap-y-4 sm:gap-x-4">
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:map-point-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Ubicación</span><span data-lang="en" class="hidden">Location</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">Doral</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:clock-circle-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Tiempo</span><span data-lang="en" class="hidden">Time</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5" style="color: #0B2B40;">4 horas</span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Servicio</span><span data-lang="en" class="hidden">Service</span></span>
+                                        </div>
+                                        <span class="text-xs sm:text-sm font-medium pl-5 leading-snug" style="color: #0B2B40;"><span data-lang="es">Instalación de Bomba de Velocidad Variable</span><span data-lang="en" class="hidden">Variable speed pump install</span></span>
+                                    </div>
+                                    <div class="flex flex-col gap-0.5 justify-end">
+                                        <div class="flex gap-1.5 items-center" style="color: #00B4D8;">
+                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="14"></iconify-icon>
+                                            <span class="uppercase text-[9px] sm:text-[10px] font-semibold tracking-wider" style="color: #0B2B40; opacity:0.45;"><span data-lang="es">Inversión</span><span data-lang="en" class="hidden">Investment</span></span>
+                                        </div>
+                                        <span class="text-base sm:text-lg font-bold pl-5" style="color: #00B4D8;">$1,250</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </section>
+            
+            <!-- Dots -->
+            <div class="flex justify-center gap-2 mt-5" id="ba-dots"></div>
+        </div>
+    </div>
+</section>
 
         <!-- Testimonials -->
         <section class="bg-[#f4f4f4] pt-24 pb-36" id="testimonials">
@@ -1060,66 +1162,73 @@
 
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
 
-        // Before/After Gallery Carousel
-        (function () {
-            const track = document.getElementById('gallery-track');
-            const prevBtn = document.getElementById('gallery-prevBtn');
-            const nextBtn = document.getElementById('gallery-nextBtn');
-            const dotsContainer = document.getElementById('gallery-indicators');
-            if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+       
+<!-- =============================================
+     SCRIPT del Slider — pegar antes de </body>
+     ============================================= -->
+// Slider Antes - Después
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('ba-track');
+    const prev = document.getElementById('ba-prevBtn');
+    const next = document.getElementById('ba-nextBtn');
+    const dotsBox = document.getElementById('ba-dots');
+    if (!track || !prev || !next || !dotsBox) return;
 
-            const slides = track.children;
-            const total = slides.length;
-            let current = 0;
+    const slides = track.children;
+    const total = slides.length;
+    let cur = 0;
 
-            // Build dot indicators
-            for (let i = 0; i < total; i++) {
-                const dot = document.createElement('button');
-                dot.setAttribute('aria-label', 'Ir a transformación ' + (i + 1));
-                dot.addEventListener('click', function () { goTo(i); });
-                dotsContainer.appendChild(dot);
+    // Create dots
+    for (let i = 0; i < total; i++) {
+        const d = document.createElement('button');
+        d.setAttribute('aria-label', 'Slide ' + (i + 1));
+        d.addEventListener('click', () => go(i));
+        dotsBox.appendChild(d);
+    }
+
+    function update() {
+        track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+        prev.disabled = cur === 0;
+        next.disabled = cur === total - 1;
+        Array.from(dotsBox.children).forEach((d, i) => {
+            if (i === cur) {
+                d.className = 'h-1.5 rounded-full transition-all duration-300 w-6';
+                d.style.background = '#00B4D8';
+            } else {
+                d.className = 'h-1.5 rounded-full transition-all duration-300 w-1.5 hover:opacity-60';
+                d.style.background = 'rgba(11,43,64,0.18)';
             }
+        });
+    }
 
-            function update() {
-                track.style.transform = 'translateX(-' + (current * 100) + '%)';
-                prevBtn.disabled = current === 0;
-                prevBtn.style.opacity = current === 0 ? '0.4' : '1';
-                nextBtn.disabled = current === total - 1;
-                nextBtn.style.opacity = current === total - 1 ? '0.4' : '1';
-                Array.from(dotsContainer.children).forEach(function (dot, i) {
-                    dot.className = i === current
-                        ? 'h-2 rounded-full transition-all duration-300 bg-sky-500 w-6'
-                        : 'h-2 rounded-full transition-all duration-300 bg-sky-200 w-2 hover:bg-sky-300';
-                });
-            }
+    function go(i) {
+        if (i < 0 || i >= total) return;
+        cur = i;
+        update();
+    }
 
-            function goTo(index) {
-                if (index < 0 || index >= total) return;
-                current = index;
-                update();
-            }
+    prev.addEventListener('click', () => go(cur - 1));
+    next.addEventListener('click', () => go(cur + 1));
 
-            prevBtn.addEventListener('click', function () { goTo(current - 1); });
-            nextBtn.addEventListener('click', function () { goTo(current + 1); });
+    // Keyboard
+    document.addEventListener('keydown', e => {
+        if (e.key === 'ArrowLeft') go(cur - 1);
+        if (e.key === 'ArrowRight') go(cur + 1);
+    });
 
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'ArrowLeft') goTo(current - 1);
-                if (e.key === 'ArrowRight') goTo(current + 1);
-            });
+    // Touch swipe (mobile)
+    let startX = 0;
+    const area = document.getElementById('ba-carousel');
+    area.addEventListener('touchstart', e => {
+        startX = e.changedTouches[0].screenX;
+    }, { passive: true });
+    area.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) go(cur + (diff > 0 ? 1 : -1));
+    }, { passive: true });
 
-            // Touch swipe
-            var touchStartX = 0;
-            var carousel = document.getElementById('gallery-carousel');
-            carousel.addEventListener('touchstart', function (e) {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-            carousel.addEventListener('touchend', function (e) {
-                var diff = touchStartX - e.changedTouches[0].screenX;
-                if (Math.abs(diff) > 50) goTo(current + (diff > 0 ? 1 : -1));
-            }, { passive: true });
-
-            update();
-        })();
+    update();
+});
     </script>
 
 </body></html>
