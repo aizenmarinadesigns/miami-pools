@@ -314,568 +314,116 @@
         </section>
 
         <!-- Before / After Gallery -->
-       <!-- ========== BEFORE/AFTER SLIDER - HVAC HERNÁNDEZ (BILINGÜE) ========== -->
-<!-- 📍 UBICACIÓN: Reemplaza la sección id="before-after" que ya tenés -->
-<!-- 🖼️ IMÁGENES: Subí los 6 archivos a /images/before-after/ con estos nombres exactos:
-     - ac-filter-cleaning.png
-     - before-after-exterior.jpeg
-     - instalacion-antes-despues-ok.png
-     - before-after-company-rooftop.png
-     - before-after-exterior-cleaning-HVAC.png
-     - before-after-company-rooftop-down-town-miami.png
--->
-
-<section id="before-after" class="overflow-hidden w-full pt-16 pb-20 bg-[#FAF7F2] relative">
-    <div class="max-w-2xl mx-auto px-6">
-
-        <!-- Header & Navigation Row -->
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-6">
+        <section id="transformaciones" section class="py-20 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div class="text-left">
-                <!-- PILL - MAYÚSCULAS uniforme -->
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4654F]/10 border border-[#D4654F]/20 text-[#D4654F] text-[10px] font-semibold uppercase tracking-wider mb-3">
-                    <span class="relative flex h-2 w-2">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#D4654F] opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-[#D4654F]"></span>
-                    </span>
-                    <span data-lang="es">NUESTROS TRABAJOS</span>
-                    <span data-lang="en" class="lang-hidden">OUR WORK</span>
-                </div>
-
-                <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#2B2B2B] mb-2">
-                    <span data-lang="es">Transformaciones</span>
-                    <span data-lang="en" class="lang-hidden">Transformations</span>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-[#2B2B2B] mb-4 translation-text" 
+                    data-en="Transformations" data-es="Transformaciones">
+                    Transformaciones
                 </h2>
-                <p class="text-base text-[#2B2B2B]/60 tracking-tight font-medium max-w-xs">
-                    <span data-lang="es">Resultados reales en Miami-Dade.</span>
-                    <span data-lang="en" class="lang-hidden">Real results across Miami-Dade.</span>
+                <p class="text-lg text-[#2B2B2B]/60 font-medium max-w-md translation-text" 
+                   data-en="Real results from our pool maintenance and repair services in Miami." 
+                   data-es="Resultados reales de nuestros servicios de mantenimiento y reparación en Miami.">
+                    Resultados reales en piscinas de Miami.
                 </p>
             </div>
-
-            <!-- Navigation Buttons -->
-            <div class="flex gap-3 self-start sm:self-end">
-                <button id="prevBtn" class="group flex items-center justify-center w-12 h-12 rounded-full border border-[#2C5F5D]/10 bg-white text-[#2C5F5D] hover:border-[#D4654F] hover:text-[#D4654F] transition-all duration-200 shadow-sm focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed">
-                    <iconify-icon icon="solar:arrow-left-linear" width="24" stroke-width="1.5"></iconify-icon>
+            <div class="flex gap-3">
+                <button id="prevBtn" class="w-12 h-12 rounded-full border border-[#2C5F5D]/20 flex items-center justify-center text-[#2C5F5D] hover:bg-[#2C5F5D] hover:text-white transition-all shadow-sm disabled:opacity-30">
+                    <iconify-icon icon="solar:arrow-left-linear" width="24"></iconify-icon>
                 </button>
-                <button id="nextBtn" class="group flex items-center justify-center w-12 h-12 rounded-full border border-[#2C5F5D]/10 bg-white text-[#2C5F5D] hover:border-[#D4654F] hover:text-[#D4654F] transition-all duration-200 shadow-sm focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed">
-                    <iconify-icon icon="solar:arrow-right-linear" width="24" stroke-width="1.5"></iconify-icon>
+                <button id="nextBtn" class="w-12 h-12 rounded-full border border-[#2C5F5D]/20 flex items-center justify-center text-[#2C5F5D] hover:bg-[#2C5F5D] hover:text-white transition-all shadow-sm disabled:opacity-30">
+                    <iconify-icon icon="solar:arrow-right-linear" width="24"></iconify-icon>
                 </button>
             </div>
         </div>
 
-        <!-- Carousel Wrapper -->
-        <div class="relative w-full group" id="carousel-container">
-            <div class="overflow-hidden rounded-3xl border border-[#2C5F5D]/10 bg-white shadow-sm relative z-10">
-                <div id="slider-track" class="flex transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+        <div class="relative overflow-visible">
+            <div id="slider-track" class="flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                
+                <div class="w-full flex-shrink-0 px-2">
+                    <div class="bg-[#FAF7F2] rounded-[2.5rem] overflow-hidden border border-[#2C5F5D]/5 flex flex-col lg:flex-row shadow-sm">
+                        <div class="lg:w-3/5 relative h-[350px] lg:h-[500px] overflow-hidden">
+                            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1a6cd12d-3fa2-46ee-a67d-56d02b72e11e_800w.png" class="w-full h-full object-cover" alt="Pool Transformation">
+                            <div class="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#2B2B2B] shadow-sm translation-text" data-en="Before" data-es="Antes">Antes</div>
+                            <div class="absolute top-6 right-6 bg-[#2C5F5D]/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-white shadow-sm translation-text" data-en="After" data-es="Después">Después</div>
+                        </div>
+                        
+                        <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="grid grid-cols-1 gap-8">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2 text-[#2C5F5D]/60 mb-1">
+                                        <iconify-icon icon="solar:map-point-linear" width="18"></iconify-icon>
+                                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] translation-text" data-en="Location" data-es="Ubicación">Ubicación</span>
+                                    </div>
+                                    <p class="text-xl font-semibold text-[#2B2B2B]">Kendall, Miami</p>
+                                </div>
+                                
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2 text-[#2C5F5D]/60 mb-1">
+                                        <iconify-icon icon="solar:potted-plants-linear" width="18"></iconify-icon>
+                                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] translation-text" data-en="Service" data-es="Servicio">Servicio</span>
+                                    </div>
+                                    <p class="text-xl font-semibold text-[#2B2B2B] translation-text" data-en="Deep Cleaning" data-es="Limpieza Profunda">Limpieza Profunda</p>
+                                </div>
 
-                    <!-- ===== CARD 1: Limpieza de Filtro - Kendall ===== -->
-                    <div class="w-full flex-shrink-0">
-                        <div class="flex flex-col h-full">
-                            <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-100">
-                                <img src="./images/before-after/ac-filter-cleaning.png"
-                                     alt="Limpieza de filtro AC - Kendall"
-                                     class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700">
-                                <!-- Pills uniformes en MAYÚSCULAS -->
-                                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-[#2B2B2B] shadow-sm">
-                                    <span data-lang="es">ANTES</span>
-                                    <span data-lang="en" class="lang-hidden">BEFORE</span>
-                                </div>
-                                <div class="absolute top-3 right-3 bg-[#2C5F5D]/90 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">DESPUÉS</span>
-                                    <span data-lang="en" class="lang-hidden">AFTER</span>
-                                </div>
-                            </div>
-                            <div class="p-6 sm:p-8">
-                                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:map-point-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">UBICACIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">LOCATION</span>
-                                            </span>
+                                <div class="flex justify-between items-end pt-6 border-t border-[#2C5F5D]/10">
+                                    <div>
+                                        <div class="flex items-center gap-2 text-[#2C5F5D]/60 mb-1">
+                                            <iconify-icon icon="solar:clock-circle-linear" width="18"></iconify-icon>
+                                            <span class="text-[10px] uppercase font-bold tracking-[0.2em] translation-text" data-en="Time" data-es="Tiempo">Tiempo</span>
                                         </div>
-                                        <span class="text-sm font-medium pl-6">Kendall</span>
+                                        <p class="text-lg font-medium text-[#2B2B2B] translation-text" data-en="6 Hours" data-es="6 Horas">6 Horas</p>
                                     </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:clock-circle-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">TIEMPO</span>
-                                                <span data-lang="en" class="lang-hidden">TIME</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">
-                                            <span data-lang="es">2 horas</span>
-                                            <span data-lang="en" class="lang-hidden">2 hours</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 col-span-2 sm:col-span-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">SERVICIO</span>
-                                                <span data-lang="en" class="lang-hidden">SERVICE</span>
-                                            </span>
-                                        </div>
-                                        <span class="leading-snug text-sm font-medium pl-6">
-                                            <span data-lang="es">Limpieza profunda de filtro</span>
-                                            <span data-lang="en" class="lang-hidden">Deep filter cleaning</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 justify-end">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">INVERSIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">INVESTMENT</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-lg font-semibold text-[#D4654F] pl-6">$89</span>
+                                    <div class="text-right">
+                                        <p class="text-3xl font-bold text-[#D4654F]">$450</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- ===== CARD 2: Instalación Nueva - Coral Gables ===== -->
-                    <div class="w-full flex-shrink-0">
-                        <div class="flex flex-col h-full">
-                            <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-100">
-                                <img src="./img/antes-despues/4-limpieza-acido-key-biscayne.png"
-                                     alt="Instalación nueva AC - Coral Gables"
-                                     class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700">
-                                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-[#2B2B2B] shadow-sm">
-                                    <span data-lang="es">ANTES</span>
-                                    <span data-lang="en" class="lang-hidden">BEFORE</span>
-                                </div>
-                                <div class="absolute top-3 right-3 bg-[#2C5F5D]/90 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">DESPUÉS</span>
-                                    <span data-lang="en" class="lang-hidden">AFTER</span>
-                                </div>
-                            </div>
-                            <div class="p-6 sm:p-8">
-                                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:map-point-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">UBICACIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">LOCATION</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">Coral Gables</span>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:clock-circle-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">TIEMPO</span>
-                                                <span data-lang="en" class="lang-hidden">TIME</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">
-                                            <span data-lang="es">4 horas</span>
-                                            <span data-lang="en" class="lang-hidden">4 hours</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 col-span-2 sm:col-span-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">SERVICIO</span>
-                                                <span data-lang="en" class="lang-hidden">SERVICE</span>
-                                            </span>
-                                        </div>
-                                        <span class="leading-snug text-sm font-medium pl-6">
-                                            <span data-lang="es">Instalación de unidad exterior</span>
-                                            <span data-lang="en" class="lang-hidden">Outdoor unit installation</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 justify-end">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">INVERSIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">INVESTMENT</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-lg font-semibold text-[#D4654F] pl-6">$1,850</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ===== CARD 3: Reemplazo de Split - Pinecrest ===== -->
-                    <div class="w-full flex-shrink-0">
-                        <div class="flex flex-col h-full">
-                            <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-100">
-                                <img src="./images/before-after/instalacion-antes-despues-ok.png"
-                                     alt="Reemplazo de split - Pinecrest"
-                                     class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700">
-                                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-[#2B2B2B] shadow-sm">
-                                    <span data-lang="es">ANTES</span>
-                                    <span data-lang="en" class="lang-hidden">BEFORE</span>
-                                </div>
-                                <div class="absolute top-3 right-3 bg-[#2C5F5D]/90 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">DESPUÉS</span>
-                                    <span data-lang="en" class="lang-hidden">AFTER</span>
-                                </div>
-                            </div>
-                            <div class="p-6 sm:p-8">
-                                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:map-point-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">UBICACIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">LOCATION</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">Pinecrest</span>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:clock-circle-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">TIEMPO</span>
-                                                <span data-lang="en" class="lang-hidden">TIME</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">
-                                            <span data-lang="es">5 horas</span>
-                                            <span data-lang="en" class="lang-hidden">5 hours</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 col-span-2 sm:col-span-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">SERVICIO</span>
-                                                <span data-lang="en" class="lang-hidden">SERVICE</span>
-                                            </span>
-                                        </div>
-                                        <span class="leading-snug text-sm font-medium pl-6">
-                                            <span data-lang="es">Instalación de mini-split</span>
-                                            <span data-lang="en" class="lang-hidden">Mini-split installation</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 justify-end">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">INVERSIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">INVESTMENT</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-lg font-semibold text-[#D4654F] pl-6">$2,200</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ===== CARD 4: Reparación Comercial - Doral ===== -->
-                    <div class="w-full flex-shrink-0">
-                        <div class="flex flex-col h-full">
-                            <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-100">
-                                <img src="./images/before-after/before-after-company-rooftop.png"
-                                     alt="Reparación comercial rooftop - Doral"
-                                     class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700">
-                                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-[#2B2B2B] shadow-sm">
-                                    <span data-lang="es">ANTES</span>
-                                    <span data-lang="en" class="lang-hidden">BEFORE</span>
-                                </div>
-                                <div class="absolute top-3 right-3 bg-[#2C5F5D]/90 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">DESPUÉS</span>
-                                    <span data-lang="en" class="lang-hidden">AFTER</span>
-                                </div>
-                                <!-- Badge comercial -->
-                                <div class="absolute bottom-3 left-3 bg-[#F28C38]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">COMERCIAL</span>
-                                    <span data-lang="en" class="lang-hidden">COMMERCIAL</span>
-                                </div>
-                            </div>
-                            <div class="p-6 sm:p-8">
-                                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:map-point-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">UBICACIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">LOCATION</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">Doral</span>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:clock-circle-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">TIEMPO</span>
-                                                <span data-lang="en" class="lang-hidden">TIME</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">
-                                            <span data-lang="es">6 horas</span>
-                                            <span data-lang="en" class="lang-hidden">6 hours</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 col-span-2 sm:col-span-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">SERVICIO</span>
-                                                <span data-lang="en" class="lang-hidden">SERVICE</span>
-                                            </span>
-                                        </div>
-                                        <span class="leading-snug text-sm font-medium pl-6">
-                                            <span data-lang="es">Reparación y recarga de refrigerante</span>
-                                            <span data-lang="en" class="lang-hidden">Repair & refrigerant recharge</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 justify-end">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">INVERSIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">INVESTMENT</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-lg font-semibold text-[#D4654F] pl-6">$650</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ===== CARD 5: Limpieza Exterior - Coconut Grove ===== -->
-                    <div class="w-full flex-shrink-0">
-                        <div class="flex flex-col h-full">
-                            <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-100">
-                                <img src="./images/before-after/before-after-exterior-cleaning-HVAC.png"
-                                     alt="Limpieza de unidad exterior - Coconut Grove"
-                                     class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700">
-                                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-[#2B2B2B] shadow-sm">
-                                    <span data-lang="es">ANTES</span>
-                                    <span data-lang="en" class="lang-hidden">BEFORE</span>
-                                </div>
-                                <div class="absolute top-3 right-3 bg-[#2C5F5D]/90 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">DESPUÉS</span>
-                                    <span data-lang="en" class="lang-hidden">AFTER</span>
-                                </div>
-                            </div>
-                            <div class="p-6 sm:p-8">
-                                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:map-point-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">UBICACIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">LOCATION</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">Coconut Grove</span>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:clock-circle-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">TIEMPO</span>
-                                                <span data-lang="en" class="lang-hidden">TIME</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">
-                                            <span data-lang="es">3 horas</span>
-                                            <span data-lang="en" class="lang-hidden">3 hours</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 col-span-2 sm:col-span-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">SERVICIO</span>
-                                                <span data-lang="en" class="lang-hidden">SERVICE</span>
-                                            </span>
-                                        </div>
-                                        <span class="leading-snug text-sm font-medium pl-6">
-                                            <span data-lang="es">Mantenimiento y limpieza exterior</span>
-                                            <span data-lang="en" class="lang-hidden">Outdoor unit maintenance & cleaning</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 justify-end">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">INVERSIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">INVESTMENT</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-lg font-semibold text-[#D4654F] pl-6">$149</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ===== CARD 6: Reparación Comercial - Downtown Miami ===== -->
-                    <div class="w-full flex-shrink-0">
-                        <div class="flex flex-col h-full">
-                            <div class="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-100">
-                                <img src="./images/before-after/before-after-company-rooftop-down-town-miami.png"
-                                     alt="Reparación comercial - Downtown Miami"
-                                     class="w-full h-full object-cover group-hover:scale-[1.01] transition-transform duration-700">
-                                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-[#2B2B2B] shadow-sm">
-                                    <span data-lang="es">ANTES</span>
-                                    <span data-lang="en" class="lang-hidden">BEFORE</span>
-                                </div>
-                                <div class="absolute top-3 right-3 bg-[#2C5F5D]/90 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">DESPUÉS</span>
-                                    <span data-lang="en" class="lang-hidden">AFTER</span>
-                                </div>
-                                <!-- Badge comercial -->
-                                <div class="absolute bottom-3 left-3 bg-[#F28C38]/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider text-white shadow-sm">
-                                    <span data-lang="es">COMERCIAL</span>
-                                    <span data-lang="en" class="lang-hidden">COMMERCIAL</span>
-                                </div>
-                            </div>
-                            <div class="p-6 sm:p-8">
-                                <div class="grid grid-cols-2 gap-y-6 gap-x-4">
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:map-point-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">UBICACIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">LOCATION</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">Downtown Miami</span>
-                                    </div>
-                                    <div class="flex flex-col gap-1">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:clock-circle-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">TIEMPO</span>
-                                                <span data-lang="en" class="lang-hidden">TIME</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-sm font-medium pl-6">
-                                            <span data-lang="es">8 horas</span>
-                                            <span data-lang="en" class="lang-hidden">8 hours</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 col-span-2 sm:col-span-1">
-                                        <div class="flex gap-2 text-[#2C5F5D] items-center">
-                                            <iconify-icon icon="solar:settings-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="uppercase text-[10px] font-semibold text-[#2C5F5D]/70 tracking-wider">
-                                                <span data-lang="es">SERVICIO</span>
-                                                <span data-lang="en" class="lang-hidden">SERVICE</span>
-                                            </span>
-                                        </div>
-                                        <span class="leading-snug text-sm font-medium pl-6">
-                                            <span data-lang="es">Reparación de unidad rooftop comercial</span>
-                                            <span data-lang="en" class="lang-hidden">Commercial rooftop unit repair</span>
-                                        </span>
-                                    </div>
-                                    <div class="flex flex-col gap-1 justify-end">
-                                        <div class="flex items-center gap-2 text-[#2C5F5D]">
-                                            <iconify-icon icon="solar:dollar-minimalistic-linear" width="16"></iconify-icon>
-                                            <span class="text-[10px] uppercase tracking-wider font-semibold text-[#2C5F5D]/70">
-                                                <span data-lang="es">INVERSIÓN</span>
-                                                <span data-lang="en" class="lang-hidden">INVESTMENT</span>
-                                            </span>
-                                        </div>
-                                        <span class="text-lg font-semibold text-[#D4654F] pl-6">$1,400</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-            </div>
 
-            <!-- Dots indicadores -->
-            <div class="flex justify-center gap-2 mt-6" id="indicators"></div>
+                <div class="w-full flex-shrink-0 px-2">
+                    <div class="bg-[#FAF7F2] rounded-[2.5rem] overflow-hidden border border-[#2C5F5D]/5 flex flex-col lg:flex-row shadow-sm">
+                        <div class="lg:w-3/5 relative h-[350px] lg:h-[500px]">
+                            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e31a0364-f8a3-4097-a234-7ff5f9dec901_800w.png" class="w-full h-full object-cover" alt="Coral Gables">
+                            <div class="absolute top-6 left-6 bg-white/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-[#2B2B2B] translation-text" data-en="Before" data-es="Antes">Antes</div>
+                            <div class="absolute top-6 right-6 bg-[#2C5F5D]/90 backdrop-blur px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest text-white translation-text" data-en="After" data-es="Después">Después</div>
+                        </div>
+                        <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">
+                            <div class="grid grid-cols-1 gap-8">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2 text-[#2C5F5D]/60 mb-1">
+                                        <iconify-icon icon="solar:map-point-linear" width="18"></iconify-icon>
+                                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] translation-text" data-en="Location" data-es="Ubicación">Ubicación</span>
+                                    </div>
+                                    <p class="text-xl font-semibold text-[#2B2B2B]">Coral Gables</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2 text-[#2C5F5D]/60 mb-1">
+                                        <iconify-icon icon="solar:potted-plants-linear" width="18"></iconify-icon>
+                                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] translation-text" data-en="Service" data-es="Servicio">Servicio</span>
+                                    </div>
+                                    <p class="text-xl font-semibold text-[#2B2B2B] translation-text" data-en="Resurfacing" data-es="Renovación de Superficie">Renovación de Superficie</p>
+                                </div>
+                                <div class="flex justify-between items-end pt-6 border-t border-[#2C5F5D]/10">
+                                    <div>
+                                        <span class="text-[10px] uppercase font-bold tracking-[0.2em] text-[#2C5F5D]/60 translation-text" data-en="Time" data-es="Tiempo">Tiempo</span>
+                                        <p class="text-lg font-medium text-[#2B2B2B] translation-text" data-en="3 Days" data-es="3 Días">3 Días</p>
+                                    </div>
+                                    <p class="text-3xl font-bold text-[#D4654F]">$4,200</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div id="slider-dots" class="flex justify-center gap-3 mt-10"></div>
         </div>
     </div>
-
-    <!-- ===== JAVASCRIPT DEL SLIDER ===== -->
-    <!-- IMPORTANTE: Pegar este script ANTES del cierre </body> de tu index.html -->
-    <!-- O dejarlo acá si querés tenerlo junto a la sección -->
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const track = document.getElementById('slider-track');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const indicatorsContainer = document.getElementById('indicators');
-            const slides = track.children;
-            const totalSlides = slides.length;
-            let currentIndex = 0;
-
-            // Generar dots dinámicamente
-            indicatorsContainer.innerHTML = '';
-            for (let i = 0; i < totalSlides; i++) {
-                const dot = document.createElement('button');
-                dot.className = `h-1.5 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#D4654F] w-6' : 'bg-[#2C5F5D]/20 w-1.5 hover:bg-[#2C5F5D]/40'}`;
-                dot.setAttribute('aria-label', `Slide ${i + 1}`);
-                dot.addEventListener('click', () => goToSlide(i));
-                indicatorsContainer.appendChild(dot);
-            }
-
-            const updateCarousel = () => {
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-                prevBtn.disabled = currentIndex === 0;
-                prevBtn.style.opacity = currentIndex === 0 ? '0.5' : '1';
-                prevBtn.style.cursor = currentIndex === 0 ? 'not-allowed' : 'pointer';
-
-                nextBtn.disabled = currentIndex === totalSlides - 1;
-                nextBtn.style.opacity = currentIndex === totalSlides - 1 ? '0.5' : '1';
-                nextBtn.style.cursor = currentIndex === totalSlides - 1 ? 'not-allowed' : 'pointer';
-
-                Array.from(indicatorsContainer.children).forEach((dot, index) => {
-                    dot.className = index === currentIndex
-                        ? 'h-1.5 rounded-full transition-all duration-300 bg-[#D4654F] w-6'
-                        : 'h-1.5 rounded-full transition-all duration-300 bg-[#2C5F5D]/20 w-1.5 hover:bg-[#2C5F5D]/40';
-                });
-            };
-
-            const goToSlide = (index) => {
-                if (index < 0 || index >= totalSlides) return;
-                currentIndex = index;
-                updateCarousel();
-            };
-
-            prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
-            nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
-
-            // Teclado
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'ArrowLeft') goToSlide(currentIndex - 1);
-                if (e.key === 'ArrowRight') goToSlide(currentIndex + 1);
-            });
-
-            // Swipe móvil
-            let touchStartX = 0;
-            let touchEndX = 0;
-            const sliderArea = document.getElementById('carousel-container');
-
-            sliderArea.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, { passive: true });
-
-            sliderArea.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                const diff = touchStartX - touchEndX;
-                if (Math.abs(diff) > 50) {
-                    goToSlide(currentIndex + (diff > 0 ? 1 : -1));
-                }
-            }, { passive: true });
-
-            updateCarousel();
-        });
-    </script>
 </section>
 
     
@@ -1442,6 +990,60 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        document.addEventListener('DOMContentLoaded', () => {
+    // Lógica del Slider
+    const track = document.getElementById('slider-track');
+    const slides = Array.from(track.children);
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const dotsContainer = document.getElementById('slider-dots');
+    
+    let currentIndex = 0;
+
+    // Crear puntos (dots) dinámicamente
+    slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${i === 0 ? 'bg-[#D4654F] w-8' : 'bg-[#2C5F5D]/20'}`;
+        dot.addEventListener('click', () => updateSlider(i));
+        dotsContainer.appendChild(dot);
+    });
+
+    const updateSlider = (index) => {
+        currentIndex = index;
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Actualizar botones
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === slides.length - 1;
+
+        // Actualizar dots
+        Array.from(dotsContainer.children).forEach((dot, i) => {
+            dot.className = `w-3 h-3 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-[#D4654F] w-8' : 'bg-[#2C5F5D]/20'}`;
+        });
+    };
+
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < slides.length - 1) updateSlider(currentIndex + 1);
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) updateSlider(currentIndex - 1);
+    });
+
+    // Soporte para Swipe en móviles
+    let touchStartX = 0;
+    track.addEventListener('touchstart', e => touchStartX = e.touches[0].clientX);
+    track.addEventListener('touchend', e => {
+        const touchEndX = e.changedTouches[0].clientX;
+        if (touchStartX - touchEndX > 50) nextBtn.click();
+        if (touchEndX - touchStartX > 50) prevBtn.click();
+    });
+
+    // --- REUTILIZAR TU LÓGICA DE IDIOMA ---
+    // Asegúrate de que tu función toggleLanguage() llame a una actualización general
+    // o que el evento del switch esté activo. El HTML de arriba ya usa data-en y data-es.
+});
 </script>
 
 
