@@ -324,7 +324,7 @@
              Para agregar una card: duplicar cualquier <article class="ba-card">
              y actualizar img, alt y los 4 campos de metadata.
              ═══════════════════════════════════════════════════════════════ -->
-        <section id="transformaciones" class="py-20 bg-[#f0f7ff]">
+        <section id="transformaciones" class="py-32 bg-white">
             <style>
                 /* Responsive card widths */
                 .ba-card { flex-shrink: 0; width: 100%; }
@@ -345,18 +345,16 @@
                 }
                 .ba-dot.active { background: #0ea5e9; width: 26px; }
 
-                /* Card metadata grid */
+                /* Card metadata grid — sin líneas internas */
                 .ba-meta {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
-                    border-top: 1px solid #e2e8f0;
+                    border-top: 1px solid #f1f5f9;
+                    padding: 6px 0;
                 }
                 .ba-meta-cell {
-                    padding: 14px 18px;
+                    padding: 10px 18px;
                 }
-                .ba-meta-cell:nth-child(odd)  { border-right: 1px solid #e2e8f0; }
-                .ba-meta-cell:nth-child(3),
-                .ba-meta-cell:nth-child(4)    { border-top: 1px solid #e2e8f0; }
                 .ba-meta-label {
                     font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
                     text-transform: uppercase; color: #94a3b8;
@@ -365,6 +363,7 @@
                 .ba-meta-value {
                     font-size: 13px; font-weight: 600; color: #1e293b;
                     font-family: 'Geist', sans-serif; line-height: 1.3;
+                    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
                 }
                 .ba-meta-value.price { color: #0284c7; font-size: 15px; font-weight: 700; }
 
@@ -378,9 +377,9 @@
                 }
                 .ba-badge-before {
                     left: 14px;
-                    background: rgba(0,0,0,0.48);
-                    color: #fde68a;
-                    border: 1px solid rgba(253,230,138,0.25);
+                    background: rgba(255,255,255,0.88);
+                    color: #0369a1;
+                    border: 1px solid rgba(255,255,255,0.5);
                 }
                 .ba-badge-after {
                     right: 14px;
