@@ -3,6 +3,10 @@
 <head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miami Pool Cleaning Service | Servicio de Limpieza de Piscinas</title>
+<meta name="description" content="Miami Pools — Servicio profesional de limpieza, mantenimiento y renovación de piscinas en Miami-Dade. Más de 200 familias confían en nosotros. ¡Pide tu cotización hoy!">
+<meta property="og:title" content="Miami Pools | Limpieza y Mantenimiento de Piscinas en Miami">
+<meta property="og:description" content="Servicio profesional de limpieza, mantenimiento y renovación de piscinas en Miami-Dade. Resultados reales. Más de 200 familias satisfechas.">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
 <script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
@@ -1292,8 +1296,10 @@
                 }
             });
 
-            // Keyboard
+            // Keyboard (skip when user is focused inside a form field)
             document.addEventListener('keydown', function (e) {
+                var tag = document.activeElement ? document.activeElement.tagName : '';
+                if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
                 if (e.key === 'ArrowLeft'  && current > 0)        { current--; render(); }
                 if (e.key === 'ArrowRight' && current < maxIdx()) { current++; render(); }
             });
